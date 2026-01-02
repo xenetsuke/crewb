@@ -16,7 +16,7 @@ FROM openjdk:17.0.1-jdk-slim
 
 
 # Copy the built .jar file from the previous build stage
-COPY --from=build /app/target/Blue-Collar-0.0.1-SNAPSHOT.jar Blue-Collar.jar
+COPY --from=build /target/Blue-Collar-0.0.1-SNAPSHOT.jar Blue-Collar.jar
 
 # Expose the port the application will run on (default for Spring Boot is 8080)
 EXPOSE 8080
